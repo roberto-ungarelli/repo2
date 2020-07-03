@@ -7,6 +7,8 @@ jobs:
       - name: test
         run: |
           if $test=="var1"; then
-          echo succeed
+           echo succeed
+          else
+           echo failed
         env:
           test: ${{ secrets.TESTVAR1 }}
