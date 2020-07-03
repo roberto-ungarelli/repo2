@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: test
         run: |
-          if $test=="var1" then
+          if $test=="var1"; then
           echo succeed
         env:
           test: ${{ secrets.TESTVAR1 }}
