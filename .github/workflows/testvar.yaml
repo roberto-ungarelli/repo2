@@ -1,1 +1,12 @@
-
+name: test
+on: [push]
+jobs:
+  testvar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          if $test=="var1" then
+          echo succeed
+        env:
+          test: ${{ secrets.TESTVAR1 }}
